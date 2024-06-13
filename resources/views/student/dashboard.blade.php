@@ -5,7 +5,7 @@
 <aside class="main-sidebar sidebar-dark-primary">
   <!-- Brand Logo -->
   <a href="#" class="brand-link text-white pt-3 d-flex align-items-center">
-    <img src="{{ url('images/logo-uso.svg') }}" alt="Logo" class="text-white pl-2" style="width: 3rem;">
+    <img src="{{ asset('images/logo-uso.svg') }}" alt="Logo" class="text-white pl-2" style="width: 3rem;">
     <span class="brand-text font-weight-bold" style="font-size: 2.5rem;">AEFI</span>
   </a>
 
@@ -87,7 +87,7 @@
   <div class="flex justify-center items-center md:items-start md:justify-start min-h-screen p-4">
     <div class="flex flex-col md:flex-row gap-4 p-4 max-w-7xl mx-auto w-full">
       <div class="card bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden w-full md:w-1/3 max-w-md transform transition-transform duration-300 hover:scale-105 relative group">
-        <img src="{{ url('images/internetUSO.jpeg') }}" alt="Card 1" class="w-full h-48 object-cover" />
+        <img src="{{ asset('images/internetUSO.jpeg') }}" alt="Card 1" class="w-full h-48 object-cover" />
         <div class="p-4">
           <h2 class="text-xl font-bold text-green-600 dark:text-green-400">DÍA DEL INTERNET USO</h2>
           <button onclick="toggleDescription('desc1')" class="mt-2 text-blue-500">17/05/2024</button>
@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="card bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden w-full md:w-1/3 max-w-md transform transition-transform duration-300 hover:scale-105 relative group">
-        <img src="{{ url('images/charlasUSO.jpeg') }}" alt="Card 2" class="w-full h-48 object-cover" />
+        <img src="{{ asset('images/charlasUSO.jpeg') }}" alt="Card 2" class="w-full h-48 object-cover" />
         <div class="p-4">
           <h2 class="text-xl font-bold text-purple-600 dark:text-purple-400">CHARLAS A INSTITUTOS</h2>
           <button onclick="toggleDescription('desc2')" class="mt-2 text-blue-500">24/04/2024</button>
@@ -116,7 +116,7 @@
         </div>
       </div>
       <div class="card bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden w-full md:w-1/3 max-w-md transform transition-transform duration-300 hover:scale-105 relative group">
-        <img src="{{ url('images/congresoUSO.jpeg') }}" alt="Card 3" class="w-full h-48 object-cover" />
+        <img src="{{ asset('images/congresoUSO.jpeg') }}" alt="Card 3" class="w-full h-48 object-cover" />
         <div class="p-4">
           <h2 class="text-xl font-bold text-indigo-600 dark:text-indigo-400">CONGRESOS DE INGENIERÍA</h2>
           <button onclick="toggleDescription('desc3')" class="mt-2 text-blue-500">18/11/2023</button>
