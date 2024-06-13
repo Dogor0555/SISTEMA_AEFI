@@ -2,41 +2,43 @@
 
 @section('content')
 
-<aside class="main-sidebar bg-dark">
+<aside class="main-sidebar sidebar-dark-primary">
   <!-- Brand Logo -->
-  <a href="#" class="brand-link text-white d-flex align-items-center py-3">
-    <img src="{{ secure_asset('images/logo-uso.svg') }}" alt="Logo" class="pl-2" style="width: 3rem;">
-    <span class="brand-text font-weight-bold ml-3" style="font-size: 2.5rem;">AEFI</span>
+  <a href="#" class="brand-link text-white pt-3 d-flex align-items-center">
+    <img src="{{ url('images/logo-uso.svg') }}" alt="Logo" class="text-white pl-2" style="width: 3rem;">
+    <span class="brand-text font-weight-bold" style="font-size: 2.5rem;">AEFI</span>
   </a>
 
   <!-- Sidebar -->
   <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
         @if(Auth::user()->user_type == 1)
         <li class="nav-item">
-          <a href="{{ secure_asset('admin/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
+          <a href="{{ url('admin/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>Dashboard</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="{{ secure_asset('admin/admin/list') }}" class="nav-link @if(Request::segment(2) == 'admin') active @endif">
+          <a href="{{ url('admin/admin/list') }}" class="nav-link @if(Request::segment(2) == 'admin') active @endif">
             <i class="nav-icon far fa-user"></i>
             <p>Admin</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="{{ secure_asset('admin/class/list') }}" class="nav-link @if(Request::segment(2) == 'class') active @endif">
+          <a href="{{ url('admin/class/list') }}" class="nav-link @if(Request::segment(2) == 'class') active @endif">
             <i class="nav-icon far fa-user"></i>
             <p>Clases</p>
           </a>
         </li>
         @elseif(Auth::user()->user_type == 2)
         <li class="nav-item">
-          <a href="{{ secure_asset('teacher/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
+          <a href="{{ url('teacher/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>Dashboard</p>
           </a>
@@ -45,7 +47,7 @@
 
         @elseif(Auth::user()->user_type == 3)
         <li class="nav-item">
-          <a href="{{ secure_asset('student/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
+          <a href="{{ url('student/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>Dashboard</p>
           </a>
@@ -54,7 +56,7 @@
 
         @elseif(Auth::user()->user_type == 4)
         <li class="nav-item">
-          <a href="{{ secure_asset('parent/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
+          <a href="{{ url('parent/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>Dashboard</p>
           </a>
@@ -77,62 +79,55 @@
 </aside>
 
 <div class="content-wrapper">
-  <div class="content-header text-center my-4">
-    <h1 class="display-4 font-weight-bold">🌟 ¡BIENVENIDO A LA PLATAFORMA "AEFI" 🌟</h1>
-    <h2 class="h4 font-weight-semibold mb-4">MIRA LAS ACTIVIDADES RECIENTES</h2>
+  <div class="content-header">
+    <h1 class="text-4xl font-extrabold text-center mt-8">🌟 ¡BIENVENIDO A LA PLATAFORMA "AEFI" 🌟</h1>
+    <h2 class="text-2xl font-semibold text-center mb-8">MIRA LAS ACTIVIDADES RECIENTES</h2>
   </div>
 
-  <div class="container d-flex justify-content-center align-items-center min-vh-100">
-    <div class="row w-100">
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm">
-          <img src="{{ secure_asset('images/internetUSO.jpeg') }}" class="card-img-top" alt="Card 1">
-          <div class="card-body">
-            <h5 class="card-title text-success">DÍA DEL INTERNET USO</h5>
-            <button class="btn btn-link p-0" onclick="toggleDescription('desc1')">17/05/2024</button>
-            <p id="desc1" class="card-text d-none mt-2">
-              This is the description for card 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div class="card-footer text-white bg-success d-flex justify-content-center align-items-center d-none" id="overlay1">
-            <p class="m-0">
-              En el marco de la celebración del Día del Internet en la USO, se llevaron a cabo diversas actividades destacadas. El evento incluyó ponencias en el auditorio Los Fundadores, donde reconocidos profesionales nacionales e internacionales disertaron sobre la accesibilidad web y la generación de código libre, proporcionando valiosos conocimientos y perspectivas sobre estos temas cruciales.
-            </p>
-          </div>
+  <div class="flex justify-center items-center md:items-start md:justify-start min-h-screen p-4">
+    <div class="flex flex-col md:flex-row gap-4 p-4 max-w-7xl mx-auto w-full">
+      <div class="card bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden w-full md:w-1/3 max-w-md transform transition-transform duration-300 hover:scale-105 relative group">
+        <img src="{{ url('images/internetUSO.jpeg') }}" alt="Card 1" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-green-600 dark:text-green-400">DÍA DEL INTERNET USO</h2>
+          <button onclick="toggleDescription('desc1')" class="mt-2 text-blue-500">17/05/2024</button>
+          <p id="desc1" class="hidden mt-2 text-zinc-600 dark:text-zinc-400">
+            This is the description for card 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500 via-green-600 to-green-700 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="p-4">
+          En el marco de la celebración del Día del Internet en la USO, se llevaron a cabo diversas actividades destacadas. El evento incluyó ponencias en el auditorio Los Fundadores, donde reconocidos profesionales nacionales e internacionales disertaron sobre la accesibilidad web y la generación de código libre, proporcionando valiosos conocimientos y perspectivas sobre estos temas cruciales.
+          </p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm">
-          <img src="{{ secure_asset('images/charlasUSO.jpeg') }}" class="card-img-top" alt="Card 2">
-          <div class="card-body">
-            <h5 class="card-title text-purple">CHARLAS A INSTITUTOS</h5>
-            <button class="btn btn-link p-0" onclick="toggleDescription('desc2')">24/04/2024</button>
-            <p id="desc2" class="card-text d-none mt-2">
-              This is the description for card 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div class="card-footer text-white bg-purple d-flex justify-content-center align-items-center d-none" id="overlay2">
-            <p class="m-0">
-              Las directivas de Ingeniería en Sistemas e Innovación y Tecnologías Humanitarias de la USO han estado activamente impartiendo charlas técnicas sobre la privacidad y seguridad de los datos en varias instituciones educativas, reforzando su compromiso con la labor social y el desarrollo tecnológico en El Salvador.
-            </p>
-          </div>
+      <div class="card bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden w-full md:w-1/3 max-w-md transform transition-transform duration-300 hover:scale-105 relative group">
+        <img src="{{ url('images/charlasUSO.jpeg') }}" alt="Card 2" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-purple-600 dark:text-purple-400">CHARLAS A INSTITUTOS</h2>
+          <button onclick="toggleDescription('desc2')" class="mt-2 text-blue-500">24/04/2024</button>
+          <p id="desc2" class="hidden mt-2 text-zinc-600 dark:text-zinc-400">
+            This is the description for card 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500 via-green-600 to-green-700 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="p-4">
+          Las directivas de Ingeniería en Sistemas e Innovación y Tecnologías Humanitarias de la USO han estado activamente impartiendo charlas técnicas sobre la privacidad y seguridad de los datos en varias instituciones educativas, reforzando su compromiso con la labor social y el desarrollo tecnológico en El Salvador.</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card shadow-sm">
-          <img src="{{ secure_asset('images/congresoUSO.jpeg') }}" class="card-img-top" alt="Card 3">
-          <div class="card-body">
-            <h5 class="card-title text-indigo">CONGRESOS DE INGENIERÍA</h5>
-            <button class="btn btn-link p-0" onclick="toggleDescription('desc3')">18/11/2023</button>
-            <p id="desc3" class="card-text d-none mt-2">
-              This is the description for card 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div class="card-footer text-white bg-indigo d-flex justify-content-center align-items-center d-none" id="overlay3">
-            <p class="m-0">
-              La Asociación Estudiantil de la Facultad de Ingeniería, desarrollo la CUARTA EDICIÓN DEL CONGRESO DE ESTUDIANTES DE INGENIERÍA UNIVERSIDAD DE SONSONATE.
-            </p>
-          </div>
+      <div class="card bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden w-full md:w-1/3 max-w-md transform transition-transform duration-300 hover:scale-105 relative group">
+        <img src="{{ url('images/congresoUSO.jpeg') }}" alt="Card 3" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 class="text-xl font-bold text-indigo-600 dark:text-indigo-400">CONGRESOS DE INGENIERÍA</h2>
+          <button onclick="toggleDescription('desc3')" class="mt-2 text-blue-500">18/11/2023</button>
+          <p id="desc3" class="hidden mt-2 text-zinc-600 dark:text-zinc-400">
+            This is the description for card 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500 via-green-600 to-green-700 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p class="p-4">
+          La Asociación Estudiantil de la Facultad de Ingeniería, desarrollo la CUARTA EDICIÓN DEL CONGRESO DE ESTUDIANTES DE INGENIERÍA UNIVERSIDAD DE SONSONATE.
+          </p>
         </div>
       </div>
     </div>
@@ -141,7 +136,7 @@
   <script>
     function toggleDescription(id) {
       const desc = document.getElementById(id);
-      desc.classList.toggle('d-none');
+      desc.classList.toggle('hidden');
     }
   </script>
 
