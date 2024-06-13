@@ -97,7 +97,7 @@
         </div>
         <div class="absolute inset-0 bg-gradient-to-br from-green-500 via-green-600 to-green-700 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p class="p-4">
-            This is the description for card 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          En el marco de la celebración del Día del Internet en la USO, se llevaron a cabo diversas actividades destacadas. El evento incluyó ponencias en el auditorio Los Fundadores, donde reconocidos profesionales nacionales e internacionales disertaron sobre la accesibilidad web y la generación de código libre, proporcionando valiosos conocimientos y perspectivas sobre estos temas cruciales.
           </p>
         </div>
       </div>
@@ -112,8 +112,7 @@
         </div>
         <div class="absolute inset-0 bg-gradient-to-br from-green-500 via-green-600 to-green-700 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p class="p-4">
-            This is the description for card 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
+          Las directivas de Ingeniería en Sistemas e Innovación y Tecnologías Humanitarias de la USO han estado activamente impartiendo charlas técnicas sobre la privacidad y seguridad de los datos en varias instituciones educativas, reforzando su compromiso con la labor social y el desarrollo tecnológico en El Salvador.</p>
         </div>
       </div>
       <div class="card bg-white dark:bg-zinc-800 shadow-md rounded-lg overflow-hidden w-full md:w-1/3 max-w-md transform transition-transform duration-300 hover:scale-105 relative group">
@@ -127,7 +126,7 @@
         </div>
         <div class="absolute inset-0 bg-gradient-to-br from-green-500 via-green-600 to-green-700 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p class="p-4">
-            This is the description for card 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          La Asociación Estudiantil de la Facultad de Ingeniería, desarrollo la CUARTA EDICIÓN DEL CONGRESO DE ESTUDIANTES DE INGENIERÍA UNIVERSIDAD DE SONSONATE.
           </p>
         </div>
       </div>
