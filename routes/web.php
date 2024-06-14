@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\StudentController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,6 +71,7 @@ Route::group(['middleware' => 'teacher'], function(){
 Route::group(['middleware' => 'student'], function(){
     Route::get('student/dashboard', [DashboardController::class,'dashboard']);
     Route::get('student/perfil', [StudentController::class,'showPerfil']);
+    Route::get('student/Actividades', [StudentController::class,'showActividades']);
 });
 
 Route::group(['middleware' => 'parent'], function(){
